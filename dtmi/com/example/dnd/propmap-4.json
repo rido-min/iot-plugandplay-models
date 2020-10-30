@@ -1,0 +1,30 @@
+﻿{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:com:example:dnd:propMap;4",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "aMap",
+        "schema": {
+          "@id": "dtmi:com:example:dnd:propMap:aMap:schema;4",
+          "@type": "Map",
+          "mapKey": {
+            "name": "aKey",
+            "schema": "string"
+          },
+          "mapValue": {
+            "name": "aValue",
+            "schema": "string"
+          }
+        },
+        "writable": false
+      }
+    ],
+    "displayName": {
+      "en": "Component"
+    }
+  }

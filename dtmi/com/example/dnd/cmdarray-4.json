@@ -1,0 +1,26 @@
+﻿{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:com:example:dnd:cmdArray;4",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Command",
+        "name": "aCommand",
+        "request": {
+          "@type": "CommandPayload",
+          "name": "req",
+          "schema": {
+            "@id": "dtmi:com:example:dnd:cmdArray:aCommand:req:schema;4",
+            "@type": "Array",
+            "elementSchema": "string"
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Component"
+    }
+  }
