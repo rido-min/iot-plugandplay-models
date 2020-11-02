@@ -1,0 +1,46 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:com:example:dnd:mMyDeviceTemplate;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "refreshInterval"
+        },
+        "name": "refreshInterval",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "reboot"
+        },
+        "name": "reboot",
+        "request": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "delay"
+          },
+          "name": "delay",
+          "schema": "integer"
+        }
+      },
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "Sensor"
+        },
+        "name": "sensor",
+        "schema": "dtmi:com:example:dnd:mySensor;1"
+      }
+    ],
+    "displayName": {
+      "en": "My Device Template"
+    }
+  }

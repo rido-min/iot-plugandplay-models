@@ -1,0 +1,21 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:com:example:dnd:mySensor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "temperature"
+        },
+        "name": "temperature",
+        "schema": "double"
+      }
+    ],
+    "displayName": {
+      "en": "My Sensor"
+    }
+  }
