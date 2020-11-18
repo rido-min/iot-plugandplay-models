@@ -1,7 +1,7 @@
 {
   "@id": "dtmi:Advantech:AIIS_3410P;1",
   "@type": "Interface",
-  "displayName": "AIIS-3410P",
+  "displayName": "AIIS-3410P changed",
   "@context": "dtmi:dtdl:context;2",
   "contents": [
     {
