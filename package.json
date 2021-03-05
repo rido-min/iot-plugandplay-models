@@ -1,0 +1,24 @@
+{
+  "name": "iot-plugandplay-models",
+  "version": "1.0.0",
+  "description": "This repository includes [DTDL](https://aka.ms/dtdl) models that are made publicly available on [https://devicemodels.azure.com](https://devicemodels.azure.com). These models can be used to create Azure [IoT Plug and Play](https://aka.ms/iotpnp) solutions.",
+  "main": "genIndex.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rido-min/iot-plugandplay-models.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rido-min/iot-plugandplay-models/issues"
+  },
+  "homepage": "https://github.com/rido-min/iot-plugandplay-models#readme",
+  "dependencies": {
+    "glob": "^7.1.6"
+  }
+}
