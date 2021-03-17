@@ -1,0 +1,128 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:azure:edgeagent;1",
+  "@type": "Interface",
+  "displayName": "edge",
+  "contents": [
+    {
+      "@type": "Command",
+      "name": "ping"
+    },
+    {
+      "@type": "Command",
+      "name": "RestartModule",
+      "request": {
+        "name": "restartRequest",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "schemaVersion",
+              "schema": "string"
+            },
+            {
+              "name": "id",
+              "displayName": "module id",
+              "description": "Module ID",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "GetModuleLogs",
+      "request": {
+        "name": "getLogsRequest",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "schemaVersion",
+              "schema": "string"
+            },
+            {
+              "name": "items",
+              "schema": {
+                "@type": "Array",
+                "elementSchema": {
+                  "@type": "Object",
+                  "fields": [
+                    {
+                      "name": "id",
+                      "description": "regex string",
+                      "schema": "string"
+                    },
+                    {
+                      "name": "filter",
+                      "schema":{
+                        "@type": "Object",
+                        "fields": [
+                          {
+                            "name": "tail",
+                            "schema": "integer"
+                          },
+                          {
+                            "name": "since",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "until",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "loglevel",
+                            "schema": "integer"
+                          },
+                          {
+                            "name": "regex",
+                            "schema": "string"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "encoding",
+              "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                  {
+                    "name": "Gzip",
+                    "enumValue": "gzip"
+                  },
+                  {
+                    "enumValue": "none",
+                    "name": "none"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "contentType",
+              "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                  {
+                    "name": "json",
+                    "enumValue": "json"
+                  },
+                  {
+                    "enumValue": "text",
+                    "name": "text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
